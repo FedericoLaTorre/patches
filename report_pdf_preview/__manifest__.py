@@ -18,7 +18,7 @@
 #                                                                            #
 
 {
-    "name": "Report Pdf Preview",
+    "name": "Report Pdf Preview Fede",
     "version": "1.1",
     "depends": [
         "web", "report_aeroo"

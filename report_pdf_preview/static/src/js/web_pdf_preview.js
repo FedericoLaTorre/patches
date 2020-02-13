@@ -23,7 +23,8 @@ odoo.define('report_pdf_preview.report', function (require) {
             if (action.report_type === 'qweb-pdf') {
                 return this.call('report', 'checkWkhtmltopdf').then(function (state) {
                     var active_ids_path = '/' + action.context.active_ids.join(',');
-                    var url = '/report/pdf/' + action.report_name + active_ids_path;
+                    // var url = '/report/pdf/' + action.report_name + active_ids_path;
+                    var url = self._makeReportUrls(action)['pdf'];
                     var filename = action.report_name;
                     var title = action.display_name;
                     var def = $.Deferred()
@@ -39,7 +40,8 @@ odoo.define('report_pdf_preview.report', function (require) {
                 return this._rpc({route: '/report/check_aeroo_pdf/' + action.report_name}).then(function(result){
                     if (result === true){
                         var active_ids_path = '/' + action.context.active_ids.join(',');
-                        var url = '/report/aeroo/' + action.report_name + active_ids_path;
+                        // var url = '/report/aeroo/' + action.report_name + active_ids_path;
+                        var url = self._makeReportUrls(action)['pdf'];
                         var filename = action.report_name;
                         var title = action.display_name;
                         var def = $.Deferred()

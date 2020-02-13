@@ -19,7 +19,7 @@
 
 {
     "name": "Report Pdf Preview",
-    "version": "1.0",
+    "version": "1.1",
     "depends": [
         "web", "report_aeroo"
         ],
@@ -39,6 +39,7 @@
     ],
     'images': ['static/description/icon.jpg','static/description/main_screenshot.png'],
     'installable': True,
+    "license": "AGPL-3",
     'active': False,
     #    'certificate': '',
 }
